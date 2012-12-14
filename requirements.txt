@@ -2,7 +2,11 @@ Flask==0.9
 Flask-RESTful==0.1.2
 Flask-SQLAlchemy==0.16
 Jinja2==2.6
+Mako==0.7.3
+MarkupSafe==0.15
 SQLAlchemy==0.7.9
 Werkzeug==0.8.3
+alembic==0.4.1
+flask-heroku==0.1.4
 psycopg2==2.4.5
 wsgiref==0.1.2
