@@ -1,5 +1,6 @@
 from app import app
 from app.models import License
+from sqlalchemy import func
 import flask
 import json
 
@@ -24,10 +25,10 @@ def home():
 def get(slug):
   v = flask.request.args.get('v')
 
+  licenses = License.query.filter(func.lower(License.abbv) == func.lower(slug))
+
   if v is not None:
-    licenses = License.query.filter_by(abbv=slug).filter_by(version = v)
-  else:
-    licenses = License.query.filter_by(abbv=slug)
+    licenses = licenses.filter_by(version = v.lower())
 
   license = licenses.first()
 
