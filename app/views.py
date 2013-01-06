@@ -1,10 +1,5 @@
-from app import admin
-from flask import Flask
-from flask.ext.admin import Admin, BaseView, expose
+from app import admin, db
+from app.models import License
+from flask.ext.admin.contrib.sqlamodel import ModelView
 
-class LicensesView(BaseView):
-  @expose('/')
-  def index(self):
-    return self.render('index.html')
-
-admin.add_view(LicensesView(name="Licenses"))
+admin.add_view(ModelView(License, db.session))

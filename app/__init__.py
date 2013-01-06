@@ -8,6 +8,7 @@ from flask.ext.admin import Admin
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+app.secret_key = os.environ['SECRET_KEY']
 
 heroku = Heroku(app)
 db = SQLAlchemy(app)
