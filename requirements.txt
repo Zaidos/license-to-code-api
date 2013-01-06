@@ -7,14 +7,12 @@ Mako==0.7.3
 MarkupSafe==0.15
 PyRSS2Gen==1.0.0
 SQLAlchemy==0.7.9
-Twisted==12.0.0
 WTForms==1.0.2
 Werkzeug==0.8.3
 alembic==0.4.1
 altgraph==0.9
 autoenv==1.0.0
 bdist-mpkg==0.4.4
-bonjour-py==0.3
 flask-heroku==0.1.4
 macholib==1.4.2
 modulegraph==0.9.1
