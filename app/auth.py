@@ -1,8 +1,10 @@
+import os
 from functools import wraps
 from flask import request, Response
 
 def check_auth(username, password):
-  return username == 'admin' and password == 'secret'
+  return username == os.environ['USERNAME'] \
+    and password == os.environ['PASSWORD']
 
 def authenticate():
   return Response(

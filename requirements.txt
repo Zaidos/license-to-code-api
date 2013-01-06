@@ -1,6 +1,5 @@
 Flask==0.9
 Flask-Admin==1.0.4
-Flask-RESTful==0.1.2
 Flask-SQLAlchemy==0.16
 Flask-WTF==0.8.2
 Jinja2==2.6
